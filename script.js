@@ -1,3 +1,5 @@
+// https://p5js.org/reference/#/p5/createGraphics
+
 let turtle = {}
 const SQRT3 = Math.sqrt(3);
 const S = 10;
@@ -55,12 +57,8 @@ function commandString() {
 }
 
 function keyPressed() {
-  if( key === 'c' ) {
-    resetTurtleCanvas();
-  }
-
+  if( key === 'c' ) { resetTurtleCanvas(); }
   if( key === 'p' ) { penDown = !penDown }
-
   if( key === 'h' ) { helpText =!helpText }
 
   if( Object.keys(movements).includes(key) ) {
